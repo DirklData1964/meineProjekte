@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:background="@drawable/hintergrund"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <!-- Leerer Bereich oben -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Zeitmesser-Tool 2.0"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <!-- Erste Eingabezeile -->
+        <EditText
+            android:id="@+id/editStartStunden"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:ems="20"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:nextFocusForward="@+id/editStartMinuten" />
+        <EditText
+            android:id="@+id/editStartMinuten"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:ems="20"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@+id/editStartSekunden"
+            android:maxLength="2" />
+        <EditText
+            android:id="@+id/editStartSekunden"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:ems="20"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@+id/editStartNanos"
+            android:maxLength="2" />
+        <EditText
+            android:id="@+id/editStartNanos"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:ems="20"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@+id/editStoppStunden"
+            android:maxLength="4" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <!-- Erste Bezeichnung -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/Startzeitpunkt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <!-- Zweite Eingabezeile -->
+        <EditText
+            android:id="@+id/editStoppStunden"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:ems="20"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@+id/editStoppMinuten"
+            android:maxLength="2" />
+        <EditText
+            android:id="@+id/editStoppMinuten"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:ems="20"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@+id/editStoppSekunden"
+            android:maxLength="2" />
+        <EditText
+            android:id="@+id/editStoppSekunden"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:ems="20"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:nextFocusForward="@+id/editStoppNanos"
+            android:maxLength="2" />
+        <EditText
+            android:id="@+id/editStoppNanos"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:ems="20"
+            android:inputType="number"
+            android:maxLength="4" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <!-- Zweite Bezeichnung -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/Lichtschrankenzeit" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <!-- Ergebnis -->
+        <TextView
+            android:id="@+id/editZeit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="5mm"
+            android:textStyle="bold"
+            android:text=""/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <!-- Text zu Ergebnis -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/Laufzeit" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <!-- Button -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Berechne" />
+    </LinearLayout>
+</LinearLayout>
